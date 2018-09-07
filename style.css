@@ -1,0 +1,29 @@
+
+#banner .content h1 {
+    border: 3px solid white;
+    /* position: relative; */
+    top: 100px;
+    width: 400px;
+    margin: 5px 10px;
+    background-color: aquamarine;
+    color: white;
+    /* padding-left: 15px; */
+    padding: 20px 15px;
+}
+
+.content h2 {
+    color: gray;
+    margin-left: 15px; 
+}
+
+.tweet-box {
+    border: 5px solid rgb(167, 164, 164);
+    border-width: thin;
+    padding: 5px;
+    margin: 5px;
+}
+
+.time {
+    font-size: smaller;
+    color: grey;
+}
