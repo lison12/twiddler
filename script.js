@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   renderTweets();
 
   $(".btn").on("click", function() {
@@ -25,30 +26,34 @@ function renderTweets() {
     $tweet.append($user, $message, $time);
     $tweet.appendTo($tweets);
     index -= 1;
-  }
 
-  $($user).on("click", function() {
-    renderUserTweets($user);
-  });
+    let username = tweet.user;
+    $user.on("click", function() {
+        //console.log(username)
+      renderUserTweets(username);
+    });
+  }
 }
 
 function renderUserTweets(name) {
-    var $tweets = $("#tweets");
-    $tweets.html("");
+  var $tweets = $("#tweets");
+  $tweets.html("");
+  var $name = $("<div class='username'></div>");
+  $name.append("@" + name);
+  $tweets.append($name);
+  //$tweets.append("@" + name);
 
-  var index = streams.users.length - 1;
+  var index = streams.users[name].length - 1;
   while (index >= 0) {
-    var userTweet = streams.users.name[index];
+    var userTweet = streams.users[name][index];
     var $tweet = $('<div class="tweet-box"></div>');
-    var $user = $("<div></div>");
     var $message = $("<div></div>");
-    var $time = $("<div></div>");
-    $user.text("@" + userTweet.user);
+    var $time = $("<div class='time'></div>");
+    
     $message.text(userTweet.message);
     $time.text(userTweet.created_at);
     $tweet.append($message, $time);
-    $tweets.append($user)
     $tweet.appendTo($tweets);
     index -= 1;
-  } 
+  }
 }

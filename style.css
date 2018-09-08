@@ -1,6 +1,7 @@
 
 #banner .content h1 {
     border: 3px solid white;
+    border-radius: 30px
     /* position: relative; */
     top: 100px;
     width: 400px;
@@ -16,11 +17,32 @@
     margin-left: 15px; 
 }
 
+#tweets {
+    height: 500px;
+    overflow: scroll;
+}
+
 .tweet-box {
     border: 5px solid rgb(167, 164, 164);
     border-width: thin;
-    padding: 5px;
+    padding: 7px;
     margin: 5px;
+}
+
+.btn {
+    margin: 7px;
+    padding: 3px;
+}
+
+.username {
+    border: 2px ridge rgb(91, 218, 175);
+    border-width: thin;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+    background: aquamarine;
+    text-align: center;
 }
 
 .time {
